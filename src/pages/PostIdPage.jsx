@@ -11,7 +11,6 @@ const PostIdPage = () => {
     const [fetchPostById, isLoading, error] = useFetching(async (id) => {
         const response = await PostService.getById(params.id)
         setPost(response.data)
-        console.log("res", response)
     })
     const [fetchComments, isComLoading, comError] = useFetching(async (id) => {
         const response = await PostService.getCommentsByPostId(params.id)

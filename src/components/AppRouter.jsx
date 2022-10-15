@@ -10,7 +10,6 @@ import {ProtectedRoute} from "./protectedRoute/ProtectedRoute";
 
 const AppRouter = () => {
     const {isAuth} = useContext(AuthContext)
-    console.log("isAuth", isAuth)
     return (
         <Routes>
             {isAuth
@@ -35,8 +34,6 @@ const AppRouter = () => {
                     element={<Login/>}
                 />
             }
-
-
             <Route
                 path='/'
                 element={<Navigate to="/login" replace/>}

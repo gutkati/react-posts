@@ -25,8 +25,6 @@ function Posts() {
     const [page, setPage] = useState(1)
     const sortedAndSearcherPosts = usePosts(posts, filter.sort, filter.query)
     const lastElement = useRef()
-    console.log(lastElement)
-
 
     const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
         const response = await PostService.getAll(limit, page)
